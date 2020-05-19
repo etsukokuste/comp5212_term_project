@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+.DS_Store
+.idea
+src/.DS_Store
+
+# datasets, results
+data/
+save/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data
+*.pkl
+*.hdf5
