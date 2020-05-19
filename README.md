@@ -7,7 +7,6 @@ Please read this carefully and follow the steps one-by-one
 ```
 $ pip install -r requirements.txt
 ```
-FYI, we are using pytorch version 1.4.0
 
 ### Prepare Labelled-Data and Split and save them into three .pkl files (train, valid, test)
 For this, only (src/data.py) is used and this code file will not be used again in any further experiment.
@@ -45,19 +44,19 @@ valid_data = dataloaders['valid']
 test_data = dataloaders['test']
 ```
 
-## main.py
-### Train a model
+### main.py
+#### Train a model
 You can train a model by 
 ```python main.py -mn cnn```.
 You can also specify other hyperparameters e.g., batch size, learning rate.  To see the other command line options, please 
 ```python main.py -h```
 All those command line options are implemented in src/cli.py.
 
-### Understanding main.py
+#### Understanding main.py
 While main.py manages the whole training procedure, the actual training is done by Trainer, which is in src/trainer. We get command line options to specify necessary arguments for Trainer, and pass them to Trainer. You do not have to write training codes for each model since main.py and src/trainer.py do not depend on them. Trainer takes care of the training, evaluation, logging, etc.
 
 
-### Miscellaneous Information
+## Miscellaneous Information
 `links.txt` includes miscellaneous information such as a link to our presentation video on YouTube.
 
 
